@@ -17,20 +17,21 @@
   .logo a {
     font-family: Raleway, sans-serif;
     font-size: 28px;
+    font-weight: 800;
     line-height: 100%;
     color: $white;
-    font-weight: 800;
     text-transform: uppercase;
   }
 
   .nav-list {
     @include flex(row, space-between, center);
+
     width: 435px;
     list-style: none;
 
     .nav-item a {
-      transition: all 0.3s;
       color: $white;
+      transition: all 0.3s;
     }
   }
 }

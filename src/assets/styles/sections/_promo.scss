@@ -1,23 +1,24 @@
 .promo {
+  padding: 202px 0;
+
   background-image: image-set(
     url('./../images/promo/promo@1x.jpg') 1x,
     url('./../images/promo/promo@2x.jpg') 2x,
     url('./../images/promo/promo@3x.jpg') 3x
   );
-
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
-  padding: 202px 0;
 }
 
 .main-title {
+  max-width: 780px;
+
   font-size: 48px;
+  font-weight: 700;
   line-height: 100%;
   text-transform: uppercase;
   letter-spacing: 0%;
-  font-weight: 700;
-  max-width: 780px;
 }
 
 .promo-description {
@@ -26,19 +27,22 @@
 
 .description-text {
   font-size: 20px;
-  line-height: 100%;
   font-weight: 700;
+  line-height: 100%;
 }
 
 .description-list {
-  list-style: none;
   margin-top: 10px;
+  list-style: none;
 }
 
 .description-list__item {
   @include flex(row, start, center);
+
   gap: 1px;
+
   margin-top: 5px;
+
   font-size: 20px;
   font-weight: 400;
   line-height: 24px;
@@ -49,9 +53,10 @@
 }
 
 .btns-wrapper {
-  margin-top: 80px;
-  @include flex(row, start, center);
   gap: 30px;
+  margin-top: 80px;
+
+  @include flex(row, start, center);
 }
 
 @media (width < 768px) {
@@ -64,9 +69,11 @@
   .promo {
     padding: 120px 0 60px;
   }
+
   .main-title {
     font-size: 24px;
   }
+
   .description-text {
     font-size: 16px;
   }
