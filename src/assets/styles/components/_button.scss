@@ -1,0 +1,19 @@
+.main-btn {
+  width: 183px;
+  height: 43px;
+  border: $border-gray;
+  font-size: 13px;
+  border-radius: 4px;
+  color: $darkgray;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  cursor: pointer;
+
+  &.active {
+    background-color: $accent;
+    color: $white;
+    border: $border-white;
+  }
+}
+
+

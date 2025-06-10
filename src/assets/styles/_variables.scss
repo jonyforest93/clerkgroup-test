@@ -1,0 +1,15 @@
+@mixin flex($flex-direction: row, $justify-content, $align-items) {
+  display: flex;
+  flex-direction: $flex-direction;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
+
+$common: #000000;
+$accent: #3e9cdc;
+$accent-border: 5px solid #286690;
+$white: #ffffff;
+$border-gray: 1px solid #6f6d7b;
+$border-white: 1px solid #ffffff;
+$darkgray: #2a2b30;
+$lightgray: #bbbbbb;

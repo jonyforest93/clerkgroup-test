@@ -1,0 +1,34 @@
+@import 'fonts';
+@import 'variables';
+@import './components/header';
+@import './components/button';
+@import './components/step';
+@import './components/order-form';
+@import './sections/promo';
+@import './sections/order';
+@import './components/footer';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Lato, sans-serif;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 14px;
+  margin: 0 auto;
+}
+
+.accent-text {
+  color: $accent;
+}

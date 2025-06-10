@@ -1,0 +1,48 @@
+@import '../variables';
+
+.header {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+
+  width: 100%;
+  padding: 33.5px 0 31.5px;
+
+  background-color: #10101de5;
+}
+
+.header-wrapper {
+  @include flex(row, space-between, center);
+
+  .logo a {
+    font-family: Raleway, sans-serif;
+    font-size: 28px;
+    line-height: 100%;
+    color: $white;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  .nav-list {
+    @include flex(row, space-between, center);
+    width: 435px;
+    list-style: none;
+
+    .nav-item a {
+      transition: all 0.3s;
+      color: $white;
+    }
+  }
+}
+
+@media (hover: hover) {
+  .nav-list .nav-item:hover a {
+    color: $accent;
+  }
+}
+
+@media (width < 750px) {
+  .header-wrapper .nav {
+    display: none;
+  }
+}

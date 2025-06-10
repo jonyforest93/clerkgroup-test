@@ -1,0 +1,26 @@
+.order {
+  background-color: #272733;
+  background-image: image-set(
+    url('./../images/order/order-bg@1x.png') 1x,
+    url('./../images/order/order-bg@2x.png') 2x,
+    url('./../images/order/order-bg@3x.png') 3x
+  );
+
+  padding: 121px 0 151px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 800;
+  text-align: center;
+  color: $white;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-size: 18px;
+  font-weight: 400;
+  color: $lightgray;
+  margin-top: 30px;
+  text-align: center;
+}

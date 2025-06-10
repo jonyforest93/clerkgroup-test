@@ -1,0 +1,230 @@
+.form-container {
+  margin-top: 144px;
+}
+
+.select {
+  position: relative;
+  grid-area: select;
+}
+
+.select.select--active .select__button {
+  color: $white;
+  background-color: #3d4050d9;
+  border: 1px solid #3d4050d9;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+
+  svg {
+    fill: $white;
+  }
+}
+
+.select__button {
+  position: relative;
+  @include flex(row, space-between, center);
+  width: 100%;
+  padding: 12px 10px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 400;
+  transition: all 0.3s;
+  border: 1px solid $white;
+  background-color: $white;
+  border-radius: 3px;
+
+  &:focus,
+  &--active {
+    outline: none;
+  }
+}
+
+.select__list {
+  width: 100%;
+  display: none;
+
+  position: absolute;
+  left: 0;
+  top: 47px;
+
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  overflow: auto;
+  height: 180px;
+
+  z-index: 1;
+  border: 1px solid #3d4050;
+  border-radius: 3px;
+  background-color: #272733e5;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  transition: all 0.3s;
+
+  &--visible {
+    display: block;
+  }
+}
+
+.select__list::-webkit-scrollbar {
+  width: 7px;
+}
+
+.select__list::-webkit-scrollbar-track {
+  background: #3d4050;
+  border-radius: 3px;
+}
+
+.select__list::-webkit-scrollbar-thumb {
+  background-color: $accent;
+  border-radius: 4px;
+  border: 2px solid #2a2c3b;
+}
+
+.select__list::-webkit-scrollbar-thumb:hover {
+  background-color: $accent;
+}
+
+.select__list::-webkit-scrollbar-button {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.select__list-item {
+  display: block;
+  width: 100%;
+  margin: 0;
+  text-align: left;
+  font-size: 18px;
+  line-height: 34px;
+  padding: 0 10px;
+  transition: all 0.3s;
+  border: none;
+  background-color: #272733e5;
+  color: $white;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $accent;
+    outline: 0;
+  }
+}
+
+.select__input-hidden {
+  display: none;
+}
+
+.select__list--visible {
+  display: block;
+}
+
+input[type='text'],
+input[type='email'],
+.file-upload {
+  width: 100%;
+  padding: 12px 10px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 400;
+  transition: all 0.3s;
+  border: 1px solid $white;
+  background-color: $white;
+  border-radius: 3px;
+}
+
+input[type='text'] {
+  grid-area: name;
+}
+
+input[type='email'] {
+  grid-area: email;
+}
+
+input[type='file'] {
+  display: none;
+}
+
+.file-upload {
+  @include flex(row, center, center);
+  gap: 10px;
+  grid-area: file;
+}
+
+.form-container {
+  display: grid;
+  grid-template-areas:
+    'select email name'
+    'range range file'
+    'button button button';
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 30px;
+  row-gap: 30px;
+}
+
+.range-container {
+  grid-area: range;
+
+  input[type='range'] {
+    position: relative;
+    top: 4px;
+    width: 100%;
+    margin-top: 6px;
+    appearance: none;
+
+    &::-webkit-slider-runnable-track {
+      background-color: $white;
+      height: 6px;
+      opacity: 0, 7;
+      border-radius: 3px;
+    }
+
+    &::-webkit-slider-thumb {
+      margin-top: -5px;
+    }
+  }
+}
+
+.range-container__info {
+  @include flex(row, space-between, center);
+  font-size: 18px;
+  color: $white;
+}
+
+.btn-submit {
+  grid-area: button;
+  width: 370px;
+  margin: 10px auto;
+}
+
+@media (width < 992px) {
+  .select__button,
+  .select__list-item,
+  input[type='text'],
+  input[type='email'],
+  .range-container__info,
+  .file-upload {
+    font-size: 14px;
+  }
+}
+
+@media (width < 768px) {
+  .form-container {
+    grid-template-areas:
+      'select'
+      'email'
+      'name'
+      'range'
+      'file'
+      'button';
+      grid-template-columns: 1fr;
+  }
+
+  .btn-submit {
+    width: 100%;
+  }
+}
+
+
